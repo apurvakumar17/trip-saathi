@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.promotional-content {
+  text-align: center;
+  color: white;
+  max-width: 400px;
+}
+
+.promotional-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.promotional-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Back Button */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #374151;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Welcome Message */
+.welcome-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+/* Form */
+.login-form {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #00c9c7 0%, #92d861 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Sign Up Link */
+.signup-link {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6b7280;
+}
+
+.signup-button {
+  background: none;
+  border: none;
+  color: #f59e0b;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup-button:hover {
+  color: #d97706;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+.divider span {
+  background: white;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Social Login */
+.social-login {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-button:hover {
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.social-button.apple {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.social-button.apple:hover {
+  background: #059669;
+  border-color: #059669;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  
+  .left-section {
+    flex: 0 0 40%;
+  }
+  
+  .promotional-title {
+    font-size: 2rem;
+  }
+  
+  .promotional-subtitle {
+    font-size: 1rem;
+  }
+  
+  .welcome-message {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-section,
+  .right-section {
+    padding: 1rem;
+  }
+  
+  .promotional-title {
+    font-size: 1.75rem;
+  }
+  
+  .form-container {
+    max-width: 100%;
+  }
+}
